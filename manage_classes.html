@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin Manage Classes</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-image: url("b.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+        </style>
+
+
+        </head >
+        <body >
+        <div >
+
+        <h5 > View Classes Info</h5 >
+        </div >
+
+        <table id="example" class="display table table-striped table-bordered" cellspacing="0" width="100%" >
+        <thead >
+        <tr >
+        <th > #</th >
+        <th > Class Name</th >
+        <th > Class Name Numeric</th >
+        <th > Section</th >
+        <th > Creation Date</th >
+        <th > Action</th >
+        </tr >
+        </thead >
+        <tfoot >
+        <tr >
+        <th > #</th >
+        <th > Class Name</th >
+        <th > Class Name Numeric</th >
+        <th > Section</th >
+        <th > Creation Date</th >
+        <th > Action</th >
+        </tr >
+        </tfoot >
+        <tbody >
+        <?php $sql = "SELECT * from tblclasses";
+        $query = $dbh- > prepare($sql);
+        $query- > execute();
+        $results=$query- > fetchAll(PDO::FETCH_OBJ);
+        $cnt=1;
+        if($query->rowCount() > 0) {
+            foreach($results as $result)
+
+        {
+            ?> <tr> <td><?php echo htmlentities($cnt);
+            ?></td> <td><?php echo htmlentities($result->ClassName);
+            ?></td> <td><?php echo htmlentities($result->ClassNameNumeric);
+            ?></td> <td><?php echo htmlentities($result->Section);
+            ?></td> <td><?php echo htmlentities($result->CreationDate);
+            ?></td> <td> <a href="edit-class.php?classid=<?php echo htmlentities($result->id);?>"><i class="fa fa-edit" title="Edit Record"></i> </a> </td> </tr> <?php $cnt=$cnt+1;
+        }
+
+        }
+        ? >
+
+
+        </tbody >
+        </table >
+
+        </body >
+        </html >
+
+

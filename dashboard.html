@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body {
+            background-image: url("b.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+
+    * {
+        box-sizing: border-box;
+    }
+
+    header {
+        background-color: #666;
+        padding: 30px;
+        text-align: center;
+        font-size: 35px;
+        color: white;
+    }
+        @media (max-width: 600px) {
+            nav, article {
+                width: 90%;
+                height: auto;
+            }
+        }
+
+        .navbar, .leftbar {
+            overflow: hidden;
+            background-color: #333;
+        }
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+
+        .navbar a, .leftbar a {
+            float: left;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+           .xx{
+                text-align: left;
+            }
+            .dropdown {
+                float: left;
+                overflow: hidden;
+            }
+
+            .dropdown .dropbtn {
+                font-size: 16px;
+                border: none;
+                outline: none;
+                color: white;
+                padding: 14px 16px;
+                background-color: inherit;
+                font-family: inherit;
+                margin: 0;
+            }
+
+            .navbar a:hover, .dropdown:hover .dropbtn {
+                background-color: red;
+            }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            .dropdown-content a {
+                float: none;
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+
+                .dropdown-content a:hover {
+                    background-color: #ddd;
+                }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    nav {
+  float: left;
+  width: 20%;
+  height: 400px;
+  background: #ccc;
+  padding: 20px;
+        }
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="index.html">Log_out</a>
+        </div>
+    </header>
+
+    <nav>
+        <div class="leftbar">
+            <div class="dropdown">
+                <button class="dropbtn">
+                    Dropdown
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <span><center><i>Class</i></center></span>
+                    <a href="create_classes.html" target="iframe_a">Create Class</a>
+                    <a href="Manage_classes.html" target="iframe_a">Manage Classes</a>
+                    <span><center><i>subject</i></center></span>
+                    <a href="create_subject.html" target="iframe_a">Create Subject</a>
+                    <a href="manage_subject.html" target="iframe_a">Manage Subjects</a>
+                    <a href="add_subject_combination.html" target="iframe_a">Add Subject Combination</a>
+                    <a href="manage_subject_combination.html" target="iframe_a">Manage Subject Combination</a>
+                    <span><center><i>student</i></center></span>
+                    <a href="create_student.html" target="iframe_a">Create Student</a>
+                    <a href="manage_student.html" target="iframe_a">Manage Student</a>
+                    <span><center><i>result</i></center></span>
+                    <a href="add_result.html" target="iframe_a">add result</a>
+                    <a href="manage_result.html" target="iframe_a">Manage result</a>
+                    <iframe height="300px" width="100%" src="demo_iframe.htm" name="iframe_a"></iframe>
+                </div>
+            </div>
+        </div>
+    </nav>
+        <iframe height="400px" width="75%" src="a.jpeg" name="iframe_a"></iframe>
+    <br/>
+    <br/>
+    <footer>
+        <p>Footer</p>
+    </footer>
+</body>
+</html>
+
